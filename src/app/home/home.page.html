@@ -20,11 +20,14 @@
       <ion-input label="Phone" [(ngModel)]="input_phone"></ion-input>
     </ion-item>
     {{set_value}}
-    <ion-button (click)="set_my_value()">Click me!</ion-button>
+    <ion-button (click)="set_my_value()">Записать</ion-button>
 
   </ion-list>
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-item *ngFor="let user of user_list">
+      <ion-label>{{user.username}}</ion-label>
+      <ion-label>{{user.phone}}</ion-label>
+      <ion-button>Удалить</ion-button>
+    </ion-item>
+  </ion-list>
 </ion-content>

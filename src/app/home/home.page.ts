@@ -12,7 +12,7 @@ interface UserData{
 })
 export class HomePage {
   title : string = "MyApp"
-  input_name : string = "John Doe"
+  input_name : string = ""
   input_phone : string = "+"
   set_value : string = "__"
   user_list : UserData[] = []
