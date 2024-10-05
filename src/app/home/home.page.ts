@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+interface UserData{
+  username: string
+  phone: string
+}
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,8 +12,18 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
   title : string = "MyApp"
-  input_val : string = "--"
+  input_name : string = "John Doe"
+  input_phone : string = "+"
   set_value : string = "__"
-  constructor() {}
+  user_list : UserData[] = []
+  set_my_value(){
+    this.user_list.push({username:this.input_name, phone:this.input_phone})
+    this.set_value = this.input_name
+  }
+  
+  
+  constructor() {   
+  }
+
 
 }

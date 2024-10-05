@@ -14,10 +14,13 @@
   </ion-header>
   <ion-list>
     <ion-item>
-      <ion-input label="Значение" [(ngModel)]="set_value"></ion-input>
+      <ion-input label="Username" [(ngModel)]="input_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Phone" [(ngModel)]="input_phone"></ion-input>
     </ion-item>
     {{set_value}}
-    <ion-button>Click me!</ion-button>
+    <ion-button (click)="set_my_value()">Click me!</ion-button>
 
   </ion-list>
   <div id="container">
